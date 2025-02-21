@@ -952,33 +952,61 @@ case-button
 
     <body class="page-template-default page page-id-593 l-body">
         <!-- 以下リニューアル時追加 -->
-        <div class="wrapper">
-            <header id="contents_header">
-                <div class="logo">
-                    <a href="https://hide-dent.com"><img
-                            src="https://hide-dent.com/wp-content/themes/hide_dental/assets/img/common/logo.png"
-                            alt="ひで歯科クリニック"></a>
+        <div>
+          <header class="site-contents_header">
+            <div class="site-logo">
+                <a href="./visiting-nursing-test.html">
+                    <p class="contents_header__logo-desc">山口市の訪問看護ステーション</p>
+                    <h1 class="contents_header__site-logo">いろどり訪問看護<br>ステーション山口中央本部</h1>
+                </a>
+            </div>
+
+            <nav class="header_contact-nav">
+              <ul>
+                <li class="header_contact-item"><a href="#home">Home</a></li>
+                <li class="header_contact-item"><a href="#about">About</a></li>
+                <li class="header_contact-item"><a href="#service">Service</a></li>
+                <li class="header_contact-item"><a href="#recruit">Recruit</a></li>
+                <a href="./form-sample.html" target="_blank"><li class="header_contact-button header_contact-item">Contact</li></a>
+            </ul>
+            </nav>
+
+            <nav class="nav">
+              <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <div class="menu">
+                <h1 class="title">CONTENTS</h1>
+                <div class="menu-border"></div>
+                <ul>
+                    <li><a href="#about">ABOUT<span>私たちについて</span></a></li>
+                    <li><a href="#features">FEATURES<span>私たちの特徴</span></a></li>
+                    <li><a href="#service">SERVICE<span>私たちにお任せください</span></a></li>
+                    <li><a href="./form-sample.html" target="_blank">CONTACT<span>ご利用方法</span></a></li>
+                    <li><a href="#recruit">RECRUIT<span>求人情報</span></a></li>
+                    <li><a href="#requirements">REQUIREMENTS<span>募集要項</span></a></li>
+                </ul>
+                <div class="menu-contact">
+                    <a href="tel:012-345-6789" class="menu-phone">
+                      <img src="./img/visiting-nursing-images/Vector.svg" alt="電話" class="menu_contact-button-icon-phone">
+                        <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> -->
+                        012-345-6789
+                    </a>
+                    <a href="./form-sample.html" class="menu-contact-button" target="_blank">
+                      <img src="./img/visiting-nursing-images/Group-phone.png" alt="問い合わせ" class="menu_contact-button-icon-contact">
+                        <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> -->
+                        Contact
+                    </a>
                 </div>
-                <div class="header_contact">
-                    <div class="header_contact_inner font_style02">
-                        <a href="tel:083-902-2225" class="hdr__tel-btn">
-                            <div class="tel_block_inner01">
-                                <p class="tel_ttl01 font_style02">お電話でのご予約・24時間受付中</p>
-                                <p class="tel_txt01 font_style_en01">083-902-2225</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="header_contact_inner">
-                                                <a href="https://apo-toolboxes.stransa.co.jp/user/web/606d6e02843a4f84aa87be55d445f53d/reservations"
-                            target="_blank" rel="noopener" class="hdr__reserve-btn">
-                            <div class="contact_btn_block01">
-                                <span class="icon_contact"></span>
-                                <p class="contact_ttl01">WEB予約</p>
-                            </div>
-                        </a>
-                                            </div>
-                </div>
-            </header>
+              </div>
+            </nav>
+        </header>
 
             <script>
             const currentURL = window.location.href;
@@ -1076,12 +1104,12 @@ case-button
             <span class="hero__large-text">全身ケア</span>
         </div>
         <div class="hero__text-block">
-            <span class="hero__small-text">歯科医院が支える</span>
+            <span class="hero__small-text">歯科医院<span class="hero__small-text-in">が</span>支える</span>
         </div>
         <div class="hero__number-block">
             <span class="hero__number-text">100</span>
             <div class="hero__text-block">
-                <span class="hero__small-text first">年の歴史を持つ</span>
+                <span class="hero__small-text first">年<span class="hero__small-text-in">の</span>歴史<span class="hero__small-text-in">を</span>持つ</span>
             </div>
         </div>
     </div>
@@ -1131,7 +1159,7 @@ case-button
 
 
   <!-- FEATURES Block -->
-  <section class="features">
+  <section id="features" class="features">
     <div class="features__header">
       <picture class="features__picture">
         <source media="(max-width: 768px)" srcset="./img/visiting-nursing-images/Rectangle 57.png">
@@ -1152,6 +1180,7 @@ case-button
           <div class="features__card-image">
             <picture>
               <source media="(max-width: 768px)" srcset="/img/visiting-nursing-images/Mask\ group-10-sp.png">
+              <source media="(max-width: 1194px)" srcset="/img/visiting-nursing-images/Mask\ group-17-sp.png">
               <img src="./img/visiting-nursing-images/Mask group-4.png" alt="歯科医院の歴史" class="features__card-image-top">
             </picture>
           </div>
@@ -1166,6 +1195,7 @@ case-button
         <div class="features__card-image">
           <picture>
             <source media="(max-width: 768px)" srcset="/img/visiting-nursing-images/Mask\ group-11-sp.png">
+            <source media="(max-width: 1194px)" srcset="/img/visiting-nursing-images/Mask\ group-18-sp.png">
             <img src="./img/visiting-nursing-images/Mask group-3.png" alt="口腔ケア" class="features__card-image-middle">
           </picture>
         </div>
@@ -1180,6 +1210,7 @@ case-button
         <div class="features__card-image">
           <picture>
             <source media="(max-width: 768px)" srcset="/img/visiting-nursing-images/Mask\ group-12-sp.png">
+            <source media="(max-width: 1194px)" srcset="/img/visiting-nursing-images/Mask\ group-19-sp.png">
             <img src="./img/visiting-nursing-images/Mask group-5.png" alt="チームケア" class="features__card-image-bottom">
           </picture>
         </div>
@@ -1192,6 +1223,7 @@ case-button
     <div class="service__header">
       <picture>
         <source media="(max-width: 768px)" srcset="./img/visiting-nursing-images/Rectangle 79.png">
+        <source media="(max-width: 1194px)" srcset="./img/visiting-nursing-images/Rectangle 98-tab.png">
         <img src="./img/visiting-nursing-images/Rectangle 11.png" alt="" class="service__image">
       </picture>
       <h2 class="service__title">SERVICE</h2>
@@ -1202,13 +1234,16 @@ case-button
     <!-- コンテンツ -->
     <div class="service__content">
       <!-- 訪問看護 -->
-      <h2 class="service__content-title">訪問看護</h2>
+      <h2 class="service__content-title top">訪問看護</h2>
       <div class="service__cards">
         <div class="service__card">
           <div class="service__card-image-container">
-            <img src="./img/visiting-nursing-images/Rectangle 147.png" alt="" class="base-image">
+            <picture>
+              <source media="(max-width: 1194px)" srcset="./img/visiting-nursing-images/Rectangle 15.png">
+              <img src="./img/visiting-nursing-images/Rectangle 147.png" alt="" class="base-image">
+            </picture>
             <img src="./img/visiting-nursing-images/Group-7.png" alt="" class="icon-image">
-            <p class="service__card-text single-line">在宅リハビリテーション</p>
+            <p class="service__card-text single-line">在宅<br>リハビリテーション</p>
           </div>
         </div>
         
@@ -1244,7 +1279,7 @@ case-button
           <div class="service__card-image-container">
             <img src="./img/visiting-nursing-images/Rectangle 147.png" alt="" class="base-image">
             <img src="./img/visiting-nursing-images/Group-6.png" alt="" class="icon-image">
-            <p class="service__card-text single-line">嚥下機能のトレーニング</p>
+            <p class="service__card-text single-line">嚥下機能の<br>トレーニング</p>
           </div>
         </div>
         
@@ -1264,7 +1299,7 @@ case-button
           <div class="service__card-image-container">
             <img src="./img/visiting-nursing-images/Rectangle 147.png" alt="" class="base-image">
             <img src="./img/visiting-nursing-images/Group-5.png" alt="" class="icon-image">
-            <p class="service__card-text single-line">患者様に合わせた食事指導</p>
+            <p class="service__card-text single-line">患者様に合わせた<br>食事指導</p>
           </div>
         </div>
         
@@ -1292,6 +1327,7 @@ case-button
     <div class="contact-section-img">
       <picture>
         <source media="(max-width: 768px)" srcset="./img/visiting-nursing-images/Rectangle 80.png">
+        <source media="(max-width: 1194px)" srcset="./img/visiting-nursing-images/Rectangle 79-tab.png">
         <img src="./img/visiting-nursing-images/Rectangle 34.png" alt="" class="contact-img">
       </picture>
       <h2>CONTACT</h2>
@@ -1306,11 +1342,13 @@ case-button
           <span class="contact-button-text phone">電話</span>
         </div>
         
-        <div class="contact-button-item pc-smartphone">
-          <img src="./img/visiting-nursing-images/Group-phone.png" alt="問い合わせ" class="contact-button-icon-contact">
-          <span class="contact-button-text contact">問い合わせ</span>
+        <a href="./form-sample.html" target="_blank" rel="noopener noreferrer">
+          <div class="contact-button-item pc-smartphone">
+            <img src="./img/visiting-nursing-images/Group-phone.png" alt="問い合わせ" class="contact-button-icon-contact">
+            <span class="contact-button-text contact">問い合わせ</span>
+          </div>
+        </a>
         </div>
-      </div>
     </div>
   </section>
 
@@ -1319,13 +1357,13 @@ case-button
     <div class="top">
       <h2>RECRUIT</h2>
       <p>求人情報</p>
-      <p class="recruit-desc">当所では３月１日の開業に伴い、オープニングスタッフを募集します！</p>
+      <p class="recruit-desc">当所では３月１日の開業に伴い、<br>オープニングスタッフを募集します！</p>
     </div>
     
     <div class="recruit-card-container">
       <div class="recruit-card">
         <div class="card-content">
-            <h2 class="title"><span>正</span>社員として<span class="br"></span>安定的に働きたい</h2>
+            <h2 class="title"><span>正</span>社員として<br>安定的に働きたい</h2>
             <p class="description">ワークライフバランスを考慮しながら、仕事もプライ<br>ベートも充実した働き方</p>
             <div class="price-tag">
               <div class="price">
@@ -1340,6 +1378,7 @@ case-button
         </div>
         <picture class="recruit-image-container-1">
           <source media="(max-width: 768px)" srcset="/img/visiting-nursing-images/Mask group-13-sp.png">
+          <source media="(max-width: 1194px)" srcset="/img/visiting-nursing-images/Mask group-20.png">
           <img class="recruit-card-image" src="./img/visiting-nursing-images/Mask group-7.png" alt="Care worker helping senior">
         </picture>
       </div>
@@ -1361,6 +1400,7 @@ case-button
         </div>
         <picture class="recruit-image-container-2">
           <source media="(max-width: 768px)" srcset="/img/visiting-nursing-images/Mask group-14-sp.png">
+          <source media="(max-width: 1194px)" srcset="/img/visiting-nursing-images/Mask group-21.png">
           <img class="recruit-card-image" src="./img/visiting-nursing-images/Mask group-6.png" alt="Care worker with elderly">
         </picture>
       </div>
@@ -1424,16 +1464,18 @@ case-button
     <div class="present">
       <picture>
         <source media="(max-width: 768px)" srcset="../img/visiting-nursing-images/present-sp.png">
+        <source media="(max-width: 1194px)" srcset="../img/visiting-nursing-images/present-tab.png">
         <img src="./img/visiting-nursing-images/present-1.png" alt="お祝い金" class="present-img">
       </picture>
     </div>
   </section>
 
   <!-- REQUIREMENTS -->
-  <section class="requirements-section">
+  <section id="requirements" class="requirements-section">
     <div class="requirements-section-img">
       <picture>
         <source media="(max-width: 768px)" srcset="./img/visiting-nursing-images/Rectangle 98.png">
+        <source media="(max-width: 1194px)" srcset="./img/visiting-nursing-images/Rectangle 99-tab.png">
         <img src="./img/visiting-nursing-images/Rectangle 11.png" alt="">
       </picture>
       <h2>REQUIREMENTS</h2>
@@ -1452,7 +1494,7 @@ case-button
         <div class="tab mobile">総務<br>(ア)</div>
     </div>
   
-    <div class="requirements-info-details">
+    <div class="requirements-info-details active">
       <div class="requirements-info-details-title">
         <h1>看護師<br>(正社員)</h1>
         <p class="requirements-info-details-title-p">自宅で療養をされている利用者様を<br>医療でサポートします｡</p>
@@ -1498,7 +1540,7 @@ case-button
         </tr>
         <tr>
             <th>休日・休暇</th>
-            <td>週休２日制（日祝＋平日）<br>
+            <td>完全週休２日制（土日祝）<br>
               ＧＷ休暇、夏季休暇５日程度、年末年始休暇７日程度、慶弔休暇、<br>
               有給休暇 （６ヶ月以上勤務から １年目10日、２年目11日～ 最大20日）<br>
               産休育休制度あり/実績あり<br>
@@ -1517,13 +1559,220 @@ case-button
             <td>セミナー参加費補助制度</td>
         </tr>
     </table>
+    
     </div>
+
+    <div class="requirements-info-details">
+      <div class="requirements-info-details-title">
+        <h1>看護師<br>(アルバイト)</h1>
+        <p class="requirements-info-details-title-p">自宅で療養をされている利用者様を<br>医療でサポートします｡</p>
+          <p>車で利用者様宅を訪問していただきます｡</p>
+      </div>
+  
+    <table class="info-table">
+        <tr>
+            <th>募集職種</th>
+            <td>看護師</td>
+        </tr>
+        <tr>
+            <th>仕事の内容</th>
+            <td>バイタルチェック、医療処置（血糖値測定､点滴､注射､痰吸引など）、身体ケア（清拭､手<br>足浴､各種介助全般）、介護度や生活環境を考慮したリハビリなど業務範囲、訪問看護の<br>業務他</td>
+        </tr>
+        <tr>
+            <th>雇用形態</th>
+            <td>アルバイト</td>
+        </tr>
+        <tr>
+            <th>年齢・経験年数</th>
+            <td>未経験可（経験者優遇）</td>
+        </tr>
+        <tr>
+            <th>雇用主の会社名</th>
+            <td>医療法人瑛幸会</td>
+        </tr>
+        <tr>
+            <th>所在地</th>
+            <td>山口県山口市中央4-1-1</td>
+        </tr>
+        <tr>
+            <th>給与</th>
+            <td>時給：1,400円</td>
+        </tr>
+        <tr>
+            <th>諸手当</th>
+            <td>賞与：(年２回)<br>通勤手当（規定あり）<br>退職金制度：(５年以上勤務)・企業型確定拠出年金制度</td>
+        </tr>
+        <tr>
+            <th>勤務時間</th>
+            <td>9:00～18:00</td>
+        </tr>
+        <tr>
+            <th>休日・休暇</th>
+            <td>
+              要相談、ＧＷ休暇、夏季休暇５日程度、年末年始休暇７日程度、慶弔休暇、<br>
+              有給休暇 （６ヶ月以上勤務から 出勤日数に沿ってあり）<br>
+              産休育休制度あり/実績あり<br>
+            </td>
+        </tr>
+        <tr>
+            <th>加入保険</th>
+            <td>健康保険（協会けんぽ）、厚生年金、雇用保険、労災保険、賠償責任保険</td>
+        </tr>
+        <tr>
+            <th>試用期間</th>
+            <td>あり（※3～6ヶ月）</td>
+        </tr>
+        <tr>
+            <th>その他</th>
+            <td>セミナー参加費補助制度</td>
+        </tr>
+    </table>
+    </div>
+
+    <div class="requirements-info-details">
+      <div class="requirements-info-details-title">
+        <h1>総務<br>(正社員)</h1>
+        <p class="requirements-info-details-title-p">バックオフィスに関する仕事です。</p>
+        <p>電話応対、患者様対応のサポート・フォロー、会議運営、取引業者対応、<br>書類整理、データ管理、資料作成、秘書業務などが中心です。</p>
+      </div>
+  
+    <table class="info-table">
+        <tr>
+            <th>募集職種</th>
+            <td>総務</td>
+        </tr>
+        <tr>
+            <th>仕事の内容</th>
+            <td>事務業務全般(スケジュール管理・電話対応・書類整理・関係業者との連絡他)</td>
+        </tr>
+        <tr>
+            <th>雇用形態</th>
+            <td>正社員</td>
+        </tr>
+        <tr>
+            <th>年齢・経験年数</th>
+            <td>未経験可</td>
+        </tr>
+        <tr>
+            <th>雇用主の会社名</th>
+            <td>医療法人瑛幸会</td>
+        </tr>
+        <tr>
+            <th>所在地</th>
+            <td>山口県山口市中央4-1-1</td>
+        </tr>
+        <tr>
+            <th>給与</th>
+            <td>月給：205,000円〜300,000円　昇給　(年１回)</td>
+        </tr>
+        <tr>
+            <th>諸手当</th>
+            <td>賞与：(年２回)<br>通勤手当・住宅手当（規定あり）<br>退職金制度：(５年以上勤務)・企業型確定拠出年金制度</td>
+        </tr>
+        <tr>
+            <th>勤務時間</th>
+            <td>9:00～18:00</td>
+        </tr>
+        <tr>
+            <th>休日・休暇</th>
+            <td>完全週休２日制（土日祝）<br>
+              ＧＷ休暇、夏季休暇５日程度、年末年始休暇７日程度、慶弔休暇、<br>
+              有給休暇 （６ヶ月以上勤務から １年目10日、２年目11日～ 最大20日）<br>
+              産休育休制度あり/実績あり<br>
+              アニバーサリー休暇（１年以上勤務の常勤スタッフに年１回、食事代として20,000円まで<br>支給）</td>
+        </tr>
+        <tr>
+            <th>加入保険</th>
+            <td>健康保険（協会けんぽ）、厚生年金、雇用保険、労災保険、賠償責任保険</td>
+        </tr>
+        <tr>
+            <th>試用期間</th>
+            <td>あり時給1,000円〜(※3～6ヶ月)</td>
+        </tr>
+        <tr>
+            <th>その他</th>
+            <td>セミナー参加費補助制度</td>
+        </tr>
+    </table>
+    </div>
+
+    <div class="requirements-info-details">
+      <div class="requirements-info-details-title">
+        <h1>総務<br>(アルバイト)</h1>
+        <p class="requirements-info-details-title-p">バックオフィスに関する仕事です。</p>
+        <p>電話応対、患者様対応のサポート・フォロー、会議運営、取引業者対応、<br>書類整理、データ管理、資料作成、秘書業務などが中心です。</p>
+      </div>
+  
+    <table class="info-table">
+        <tr>
+            <th>募集職種</th>
+            <td>総務</td>
+        </tr>
+        <tr>
+            <th>仕事の内容</th>
+            <td>バイタルチェック、医療処置（血糖値測定､点滴､注射､痰吸引など）、身体ケア（清拭､手<br>足浴､各種介助全般）、介護度や生活環境を考慮したリハビリなど業務範囲、訪問看護の<br>業務他</td>
+        </tr>
+        <tr>
+            <th>雇用形態</th>
+            <td>アルバイト</td>
+        </tr>
+        <tr>
+            <th>年齢・経験年数</th>
+            <td>未経験可</td>
+        </tr>
+        <tr>
+            <th>雇用主の会社名</th>
+            <td>医療法人瑛幸会</td>
+        </tr>
+        <tr>
+            <th>所在地</th>
+            <td>山口県山口市中央4-1-1</td>
+        </tr>
+        <tr>
+            <th>給与</th>
+            <td>時給：1,000円〜</td>
+        </tr>
+        <tr>
+            <th>諸手当</th>
+            <td>賞与：(年２回)<br>通勤手当・住宅手当（規定あり）<br>退職金制度：(５年以上勤務)・企業型確定拠出年金制度</td>
+        </tr>
+        <tr>
+            <th>勤務時間</th>
+            <td>9:00～18:00</td>
+        </tr>
+        <tr>
+            <th>休日・休暇</th>
+            <td>
+              要相談、ＧＷ休暇、夏季休暇５日程度、年末年始休暇７日程度、慶弔休暇、<br>
+              有給休暇 （６ヶ月以上勤務から 出勤日数に沿ってあり）<br>
+              産休育休制度あり/実績あり<br>
+            </td>
+        </tr>
+        <tr>
+            <th>加入保険</th>
+            <td>健康保険（協会けんぽ）、厚生年金、雇用保険、労災保険、賠償責任保険</td>
+        </tr>
+        <tr>
+            <th>試用期間</th>
+            <td>同条件(※3～6ヶ月)</td>
+        </tr>
+        <tr>
+            <th>その他</th>
+            <td>セミナー参加費補助制度</td>
+        </tr>
+    </table>
+    
+    </div>
+
+    
     </div>
 
     <div class="entry-button-container">
-      <div class="entry-button-item">
-        <button>ENTRY</button>
-      </div>
+      <a href="./form-sample.html" target="_blank">
+        <div class="entry-button-item">
+          <button>ENTRY</button>
+        </div>
+      </a>
     </div>
     
     
@@ -1532,6 +1781,7 @@ case-button
       <div class="information-section-img">
         <picture>
           <source media="(max-width: 768px)" srcset="../img/visiting-nursing-images/Rectangle 123.png">
+          <source media="(max-width: 1194px)" srcset="../img/visiting-nursing-images/Rectangle 123-tab.png">
           <img src="./img/visiting-nursing-images//Rectangle 67.png" alt="info-image" class="info-img">
         </picture>
 
@@ -1558,17 +1808,15 @@ case-button
                  <li><a href="#about">ABOUT   <span>私たちについて</span></a></li>
                  <li><a href="#features">FEATURES   <span>私たちの特徴</span></a></li>
                  <li><a href="#service">SERVICE   <span>私たちにお任せください</span></a></li>
-                 <li><a href="#contact">CONTACT   <span>ご利用方法</span></a></li>
+                 <li><a href="./form-sample.html" target="_blank">CONTACT   <span>ご利用方法</span></a></li>
                  <li><a href="#recruit">RECRUIT   <span>求人情報</span></a></li>
                  <li><a href="#requirements">REQUIREMENTS   <span>募集要項</span></a></li>
                </ul>
              </div>
             </div>
             <div class="footer">
-              <picture>
-                <source media="(max-width: 768px)" srcset="../img/visiting-nursing-images/Mask group-8.png">
-                <img src="./img/visiting-nursing-images/Mask group-8.png" alt="" class="footer-image">
-              </picture>
+              <!-- 拡大 -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6601.935230040143!2d131.4660273094788!3d34.17274565185071!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35449719f039c075%3A0xce38f9ca3d3225f0!2z44Gy44Gn5q2v56eR44Kv44Oq44OL44OD44KvIOefr-ato-atr-enkeODu-OBk-OBqeOCguatr-enkQ!5e0!3m2!1sja!2sjp!4v1739866657820!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               <div class="copyright">
                 <p>@ Visiting nursing Station.</p>
             </div>
@@ -1736,7 +1984,7 @@ case-button
 
   <div class="ft_accsess">
     <div class="ft_accsess_map"><iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13203.514931398948!2d131.4720137!3d34.175018!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35449719f039c075%3A0xce38f9ca3d3225f0!2z44Gy44Gn5q2v56eR44Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sjp!4v1685038788895!5m2!1sja!2sjp"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13203.514931398948!2d131.4720137!3d34.175018!3m2!1i1024!2i768!4f5.1!3m3!1m2!1s0x35449719f039c075%3A0xce38f9ca3d3225f0!2z44Gy44Gn5q2v56eR44Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sjp!4v1685038788895!5m2!1sja!2sjp"
         width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     <div class="ft_accsess_img"><img src="https://hide-dent.com/wp-content/themes/hide_dental/assets/img/common/ft_img01.jpg"
@@ -1773,7 +2021,8 @@ case-button
     <a href="https://www.instagram.com/hideshika.official/" target="_blank"><img src="https://hide-dent.com/wp-content/themes/hide_dental/assets/img/common/icon_insta01.png" alt="instagram"></a>
   </div>
 </section>
-<p class="pagetop_btn"><a href="#wrapper">▲</a></p>
+<!-- <p class="pagetop_btn"><a href="#wrapper">▲</a></p> -->
+<p class="pagetop_btn_irodori"><a href="#wrapper"></a></p>
 
 <script>
 let btn = document.querySelector('.mv_linkarea-btn');
@@ -1850,6 +2099,111 @@ var wpcf7 = {"api":{"root":"https:\/\/hide-dent.com\/wp-json\/","namespace":"con
 /* <![CDATA[ */
 var wpcf7_recaptcha = {"sitekey":"6LfTcyAqAAAAAFbIPtHCwW5UnUyxZGEqNotijIM3","actions":{"homepage":"homepage","contactform":"contactform"}};
 /* ]]> */
+</script>
+<script>
+  /** ページトップへ **/
+  document.addEventListener('DOMContentLoaded', function() {
+    const topButton = document.querySelector('.pagetop_btn_irodori');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 100) {
+        topButton.classList.add('visible');
+      } else {
+        topButton.classList.remove('visible');
+      }
+    });
+  
+    topButton.querySelector('a').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  /** ヘッダーカラーチェンジ **/
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.site-contents_header');
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 0) {
+        header.style.backgroundColor = '#ffffff';
+        // トランジションをスムーズにするためにクラスを追加
+        header.classList.remove('fixed_head');
+      } else {
+        header.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+      }
+    });
+  });
+
+  /** ハンバーガー **/
+  const hamburger = document.querySelector(".hamburger");
+  const menu = document.querySelector(".menu");
+
+  hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  menu.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    menu.classList.remove("active");
+  });
+  });
+
+  document.addEventListener("click", (e) => {
+  if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
+    hamburger.classList.remove("active");
+    menu.classList.remove("active");
+  }
+  });
+
+  /** タブ切り替え **/
+  // PC用とモバイル用でタブの切り替え処理を分ける
+  function setupTabs() {
+    const isMobile = window.innerWidth <= 768;
+    const tabSelector = isMobile ? '.tab.mobile' : '.tab:not(.mobile)';
+    const tabs = document.querySelectorAll(tabSelector);
+  
+    // 現在アクティブなタブの index を取得
+    const activeTab = document.querySelector('.tab.active');
+    let activeIndex = [...tabs].indexOf(activeTab);
+    if (activeIndex === -1) activeIndex = 0; // もし見つからなければ最初のタブを選択
+  
+    // すべてのタブから active クラスを削除
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  
+    // アクティブなタブを復元
+    if (tabs.length > 0) {
+      tabs[activeIndex].classList.add('active');
+    }
+  
+    // コンテンツもアクティブなものを復元
+    document.querySelectorAll('.requirements-info-details').forEach((content, idx) => {
+      content.classList.toggle('active', idx === activeIndex);
+    });
+  
+    // タブクリック時の処理
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.requirements-info-details').forEach(c => c.classList.remove('active'));
+  
+        tab.classList.add('active');
+        document.querySelectorAll('.requirements-info-details')[index].classList.add('active');
+      });
+    });
+  }
+  
+
+  // 初回実行
+  document.addEventListener('DOMContentLoaded', setupTabs);
+
+  // リサイズイベントハンドラー
+  window.addEventListener('resize', setupTabs);
+
 </script>
 <script src="https://hide-dent.com/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.9.3" id="wpcf7-recaptcha-js"></script>
 </body>

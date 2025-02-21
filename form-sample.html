@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KKS6HDV3');
+            </script>
+            <!-- End Google Tag Manager -->
+            <!-- 以下リニューアル時追加 -->
+            <!-- Google Tag Manager -->
+            <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-M9CD3KSQ');
+            </script>
+            <!-- End Google Tag Manager -->
+
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" href="/wp-content/themes/hide_dental/assets/img/common/favicon.png">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css">
+    <link rel="stylesheet" href="./form/mfp.statics/mailformpro.css">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://hide-dent.com/wp-content/themes/hide_dental/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://hide-dent.com/wp-content/themes/hide_dental/assets/css/master.css?v=1.0.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/visiting-nursing.css">
+</head>
+
+<style>
+    .u__sp-only {
+        display: block;
+    }
+    
+    .u__sp-tb-only {
+        display: block;
+    }
+    
+    .u__tb-only {
+        display: none;
+    }
+    
+    .u__tb-pc-only {
+        display: none;
+    }
+    
+    .u__pc-only {
+        display: none;
+    }
+
+    select {
+        color: #000 !important;
+        background: #fff !important;
+    }
+
+    .select-wrapper {
+        position: relative;
+        background-color: #ffffff;
+    }
+    
+    .select-arrow {
+        position: absolute;
+        right: 490px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #539F6E;
+        font-size: 20px;
+        pointer-events: none;
+    }
+    
+    /**.sec-11__formitem-txt.select {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 30%;
+        height: 70%;
+        padding: 0 40px 0 20px;
+        border: 1px solid #999;
+        border-radius: 8px;
+        background-color: #fff;
+        font-size: 16px;
+        line-height: 1.36;
+        letter-spacing: .08em;
+        color: #333;
+        cursor: pointer;
+        appearance: none;
+    } **/
+    
+    .sec-11__formitem-txt select:focus {
+        outline: none;
+    }
+    
+    .select option {
+        padding: 8px;
+        font-size: 16px;
+    }
+    
+    /* プレースホルダーのスタイル */
+    .sec-11__formitem-txt select option:first-child {
+        color: #999;
+    }
+
+    .information-section {
+        margin-top: -300px;
+        position: relative;
+    }
+
+    
+    @media screen and (min-width: 768px) {
+        .u__sp-only {
+            display: none;
+        }
+        .u__sp-tb-only {
+            display: block;
+        }
+        .u__tb-only {
+            display: block;
+        }
+        .u__tb-pc-only {
+            display: block;
+        }
+        .u__pc-only {
+            display: none;
+        }
+    }
+    
+    @media screen and (min-width: 1024px) {
+        .u__sp-only {
+            display: none;
+        }
+        .u__sp-tb-only {
+            display: none;
+        }
+        .u__tb-only {
+            display: none;
+        }
+        .u__tb-pc-only {
+            display: block;
+        }
+        .u__pc-only {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .sec-11__wrapper {
+            width: auto;
+            height: 2000px;
+            background-color: #F8F8E8;
+        }
+
+        .information-section {
+            margin-top: -300px;
+            width: auto;
+        }
+    }
+</style>
+
+<body>
+    <header class="site-contents_header">
+        <div class="site-logo">
+            <a href="./visiting-nursing-test.html">
+                <p class="contents_header__logo-desc">山口市の訪問看護ステーション</p>
+                <h1 class="contents_header__site-logo">いろどり訪問看護<br>ステーション山口中央本部</h1>
+            </a>
+        </div>
+
+        <!-- <nav class="header_contact-nav">
+          <ul>
+            <li class="header_contact-item"><a href="#home">Home</a></li>
+            <li class="header_contact-item"><a href="#about">About</a></li>
+            <li class="header_contact-item"><a href="#service">Service</a></li>
+            <li class="header_contact-item"><a href="#recruit">Recruit</a></li>
+            <li class="header_contact-button header_contact-item"><a href="./form-sample.html">Contact</a></li>
+        </ul>
+        </nav> -->
+
+        <!-- <nav class="nav">
+          <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="menu">
+            <h1 class="title">CONTENTS</h1>
+            <div class="menu-border"></div>
+            <ul>
+                <li><a href="#about">ABOUT<span>私たちについて</span></a></li>
+                <li><a href="#features">FEATURES<span>私たちの特徴</span></a></li>
+                <li><a href="#service">SERVICE<span>私たちにお任せください</span></a></li>
+                <li><a href="./form-sample.html">CONTACT<span>ご利用方法</span></a></li>
+                <li><a href="#recruit">RECRUIT<span>求人情報</span></a></li>
+                <li><a href="#requirements">REQUIREMENTS<span>募集要項</span></a></li>
+            </ul>
+            <div class="menu-contact">
+                <a href="tel:012-345-6789" class="menu-phone">
+                  <img src="./img/visiting-nursing-images/Vector.svg" alt="電話" class="menu_contact-button-icon-phone">
+                    012-345-6789
+                </a>
+                <a href="#" class="menu-contact-button">
+                  <img src="./img/visiting-nursing-images/Group-phone.png" alt="問い合わせ" class="menu_contact-button-icon-contact">
+                    Contact
+                </a>
+            </div>
+          </div>
+        </nav> -->
+    </header>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKS6HDV3" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- 以下リニューアル時追加 -->
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9CD3KSQ" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+
+            <style>
+                .sec-11__ttlwrap {
+                    margin-bottom: 40px;
+                }
+                
+                @media screen and (min-width: 1024px) {
+                    .sec-11__ttlwrap {
+                        margin-bottom: 80px;
+                        width: 832px;
+                        max-width: 100%;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+                
+                @media screen and (min-width: 1024px) {
+                    .sec-11__ttl,
+                    .sec-11__txt {
+                        text-align: center;
+                    }
+                }
+
+                .sec-11__formitem {
+                    margin-top: 30px;
+                }
+                
+                .sec-11__formitem-top {
+                    font-size: 16px;
+                    line-height: 1.36;
+                    letter-spacing: .08em;
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                }
+                
+                .sec-11__formitem-wrap {
+                    display: flex;
+                    height: 56px;
+                }
+                
+                @media screen and (min-width: 768px) {
+                    .sec-11__wrapper {
+                        margin-top: 80px;
+                        min-height: 100%;
+                        height: 2000px;
+                        padding: 30px;
+                        background: #F8F8E8;
+                    }
+                    
+                    .sec-11__formitem-wrap {
+                        height: 64px;
+                    }
+                }
+                
+                .sec-11__formitem-container {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 24px;
+                }
+                
+                @media screen and (min-width: 768px) {
+                    .sec-11__formitem-container {
+                        flex-direction: row;
+                        gap: 48px;
+                    }
+                    .sec-11__formitem-container .sec-11__formitem {
+                        margin-bottom: 0;
+                        width: calc(100% - 48px);
+                    }
+                }
+                
+                .sec-11__formitem-ttl {
+                    font-size: 15px;
+                    line-height: 1.36;
+                    letter-spacing: .08em;
+                    font-weight: 700;
+                    color: #fff;
+                    border-radius: 8px 0 0 8px;
+                    background: #539F6E;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 56px !important;
+                    max-width: 100%;
+                }
+                
+                .sec-11__formitem-ttl-y {
+                    background: #68B888;
+                }
+                
+                .sec-11__formitem-txt [type="text"],
+                .sec-11__formitem-txt [type="tel"],
+                .sec-11__formitem-txt [type="email"] {
+                    border: none;
+                    height: 100%;
+                    /*
+            width: calc(100% - 40px);
+            */
+                    width: 100%;
+                    border: none;
+                    padding: 0 20px;
+                    max-width: 100%;
+                    border-radius: 0 8px 8px 0;
+                    background-color: #fff;
+                    letter-spacing: .08em;
+                    font-size: 18px;
+                }
+                
+                /*.sec-11__formitem-container .sec-11__formitem-txt [type="text"],
+                .sec-11__formitem-container .sec-11__formitem-txt [type="tel"] {
+                    width: calc(100% - 48px);
+                }*/
+                
+                @media screen and (min-width: 768px) {
+                    .sec-11__formitem-container .sec-11__formitem-txt [type="text"],
+                    .sec-11__formitem-container .sec-11__formitem-txt [type="tel"] {
+                        width: calc(100% - 40px);
+                    }
+                }
+                
+                .sec-11__formitem-txt textarea {
+                    border: none;
+                    /*
+            height: calc(100% - 32px) !important;
+            width: calc(100% - 40px) !important;
+            */
+                    width: 100%;
+                    height: 100%;
+                    padding: 16px 20px;
+                    border-radius: 0 8px 8px 0;
+                    background-color: #fff;
+                    letter-spacing: .08em;
+                    font-size: 17px;
+                    max-width: 100%;
+                }
+                
+                .sec-11__formitem-text {
+                    height: 208px;
+                }
+                
+                .sec-11__formitem-txt {
+                    font-size: 17px;
+                    line-height: 1.36;
+                    letter-spacing: .08em;
+                    font-weight: 700;
+                    width: calc(100% - 56px);
+                    /*overflow: hidden;*/
+                }
+                
+                .sec-11__formitem:not(:last-of-type) {
+                    margin-bottom: 24px;
+                }
+                
+                @media screen and (min-width: 768px) {
+                    .sec-11__formitem:not(:last-of-type) {
+                        margin-bottom: 40px;
+                    }
+                }
+                
+                .sec-11__form-btn {
+                    width: 328px;
+                    max-width: 100%;
+                    height: 72px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    border: none;
+                    border-radius: 36px;
+                    background: #539F6E;
+                    margin: 0 auto 56px;
+                    color: #FFF;
+                    font-size: 20px;
+                    font-weight: 300;
+                    line-height: 1;
+                }
+                
+                /** @media screen and (min-width: 768px) {
+                    .sec-11__form-btn {
+                        width: calc(100% - 16px);
+                    }
+                         .sec-11__item::after {
+                
+                    top: 8px;
+                  
+               
+                    }
+                } **/
+                
+                @media screen and (min-width: 1024px) {
+                    .sec-11__form-btn {
+                        width: 632px;
+                    }
+                }
+                
+                .sec-11__formlist {
+                    margin-bottom: 56px;
+                }
+                
+                @media screen and (min-width: 1024px) {
+                    .sec-11__formlist {
+                        width: 744px;
+                        max-width: 100%;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+                
+                .sec-11__listwrap {
+                    padding: 20px 24px;
+                    border: 1px solid #68B888;;
+                    border-radius: 8px;
+                    width: 90%;
+                    max-width: 1024px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                
+                @media screen and (min-width: 1024px) {
+                    .sec-11__list {
+                        width: 856px;
+                        max-width: 100%;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+                
+                .sec-11__item {
+                    padding-left: 24px;
+                    position: relative;
+                    line-height: 2;
+                    font-size: 15px;
+                    letter-spacing: .08em;
+                }
+                
+                /** .sec-11__item::after {
+                    position: absolute;
+                    content: "";
+                    top: 7px;
+                    left: 0;
+                    width: 12px;
+                    height: 12px;
+                    background: url(../metalfree/img/sec-11__01.png) no-repeat center center / contain;
+                } **/
+                
+                @media screen and (min-width: 1024px) {
+                    .sec-11__inner {
+                        /* width: calc(1024px + 80px); */
+                    }
+                }
+                
+                form#mailformpro dl dd {
+                    border-top: none;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 17px;
+                    line-height: 1.36;
+                    text-align: left;
+                }
+                
+                .mfp_element_text,
+                .mfp_element_number,
+                .mfp_element_select-one,
+                .mfp_element_email,
+                .mfp_element_tel,
+                .mfp_element_textarea,
+                .mfp_element_date,
+                .mfp_element_password {
+                    margin: 0;
+                    box-shadow: none;
+                }
+                
+                form#mailformpro dl dt {
+                    float: none;
+                    width: auto;
+                    clear: none;
+                    font-size: 16px;
+                    padding: 0;
+                    text-align: start;
+                    border-top: none;
+                    margin: 0px;
+                }
+                
+                .sec-11__form-btn.sec__btn.mfp_element_submit.mfp_element_all {
+                    padding: 0;
+                    border: none;
+                    background: none;
+                    background: none;
+                    background: none;
+                    background: #539F6E;
+                    text-shadow: none;
+                    cursor: pointer;
+                    outline: none;
+                }
+                
+                .sec-11__formitem-txt select.mfp_element_select-one {
+                    margin-top: 10px;
+                    margin-left: 10px;
+                    width: 30%;
+                    height: 70%;
+                    padding: 0 40px 0 20px;
+                    border: 1px solid #999;
+                    border-radius: 8px;
+                    background-color: #fff;
+                    font-size: 16px;
+                    line-height: 1.36;
+                    letter-spacing: .08em;
+                    color: #333;
+                    cursor: pointer;
+                    appearance: none;
+                }
+
+                @media screen and (min-width: 820px) and (max-width: 1194px) {
+                    .information-section {
+                        margin-top: -400px;
+                        position: relative;
+                    }
+
+                    .information-section-img .info-img {
+                        width: 100%;
+                        height: 1200px;
+                        margin: auto;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) and (max-width: 1366px) {
+                    .information-section {
+                        margin-top: -400px;
+                        position: relative;
+                    }
+
+                    .information-section-img .info-img {
+                        width: 100%;
+                        height: auto;
+                        margin: auto;
+                    }
+                }
+            </style>
+            <!-- 10 -->
+            <section id="contact-form" class="sec-11__wrapper sc__wrapper">
+
+                    <form class="sec-11__form" method="post" id="mailformpro">
+                        <div class="sec-11__formwrap">
+                            <ul class="sec-11__formlist">
+                                <li class="sec-11__formitem">
+                                    <div class="sec-11__formitem-top">
+                                        <label>氏名</label>
+                                    </div>
+                                    <dl class="sec-11__formitem-wrap">
+                                        <dt class="sec-11__formitem-ttl">必須</dt>
+                                        <dd class="sec-11__formitem-txt">
+                                            <input placeholder="氏名" type="text" name="氏名" required>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li class="sec-11__formitem">
+                                    <div class="sec-11__formitem-top">
+                                        <label>ふりがな</label>
+                                    </div>
+                                    <dl class="sec-11__formitem-wrap">
+                                        <dt class="sec-11__formitem-ttl sec-11__formitem-ttl-y">任意</dt>
+                                        <dd class="sec-11__formitem-txt">
+                                            <input placeholder="しめい" type="text" name="ふりがな">
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li class="sec-11__formitem">
+                                    <div class="sec-11__formitem-top">
+                                        <label>電話番号</label>
+                                    </div>
+                                    <dl class="sec-11__formitem-wrap">
+                                        <dt class="sec-11__formitem-ttl">必須</dt>
+                                        <dd class="sec-11__formitem-txt">
+                                            <input  placeholder="0123456789" type="tel" name="電話番号" required>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li class="sec-11__formitem">
+                                    <div class="sec-11__formitem-top">
+                                        <label>email</label>
+                                    </div>
+                                    <dl class="sec-11__formitem-wrap">
+                                        <dt class="sec-11__formitem-ttl">必須</dt>
+                                        <dd class="sec-11__formitem-txt">
+                                            <input placeholder="e-mail＠xxx.com" type="email" name="email" required>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li class="sec-11__formitem">
+                                    <div class="sec-11__formitem-top">
+                                        <label>確認のためもう一度</label>
+                                    </div>
+                                    <dl class="sec-11__formitem-wrap">
+                                        <dt class="sec-11__formitem-ttl">必須</dt>
+                                        <dd class="sec-11__formitem-txt">
+                                            <input placeholder="e-mail＠xxx.com" type="email" name="email（確認のためもう一度）" required>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li class="sec-11__formitem">
+                                    <div class="sec-11__formitem-top">
+                                        <label>サービスまたは求人に関するお問い合わせ</label>
+                                    </div>
+                                    <dl class="sec-11__formitem-wrap">
+                                        <dt class="sec-11__formitem-ttl">必須</dt>
+                                        <dd class="sec-11__formitem-txt select-wrapper">
+                                            <select name="サービスまたは求人に関するお問い合わせ" class="select" required>
+                                                <option value="">選択してください</option>
+                                                <option value="サービスに関するお問い合わせ">サービスに関するお問い合わせ</option>
+                                                <option value="求人に関するお問い合わせ">求人に関するお問い合わせ</option>
+                                                <option value="その他">その他</option>
+                                            </select>
+                                            <span class="select-arrow">▼</span>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li class="sec-11__formitem">
+                                    <div class="sec-11__formitem-top">
+                                        <label>お問い合わせ内容</label>
+                                    </div>
+                                    <dl class="sec-11__formitem-wrap sec-11__formitem-text">
+                                        <dt class="sec-11__formitem-ttl">必須</dt>
+                                        <dd class="sec-11__formitem-txt">
+                                            <textarea name="お問い合わせ内容" placeholder="お気軽にお問い合わせください。" required></textarea>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <button class="sec-11__form-btn sec__btn mfp_element_submit mfp_element_all">
+                                確認して送信
+                            </button>
+                            <div class="sec-11__listwrap">
+                                <ul class="sec-11__list">
+                                    <li class="sec-11__item sc_txt">ドメイン指定受信をしている場合にはcontact@hide-dent.comを受信できるように設定ください。</li>
+                                    <li class="sec-11__item sc_txt">入力いただいた個人情報は当施設でのサービスに関してのみ使用するもので、個人の同意無く第三者に開示することはありません。</li>
+                                    <li class="sec-11__item sc_txt">送信できない場合は当施設までご連絡ください。</li>
+                                    <li class="sec-11__item sc_txt">当施設に関連の無い営業目的の利用は固くお断りしております。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                    <script src="./form/mailformpro/mailformpro.cgi" id="mfpjs"></script>
+                </section>
+
+    <!-- INFORMATION -->
+    <div class="information-section">
+        <div class="information-section-img">
+          <picture>
+            <source media="(max-width: 768px)" srcset="../img/visiting-nursing-images/Rectangle 123.png">
+            <source media="(max-width: 1194px)" srcset="../img/visiting-nursing-images/Rectangle 123-tab.png">
+            <img src="./img/visiting-nursing-images//Rectangle 67.png" alt="info-image" class="info-img">
+          </picture>
+  
+           <h2>INFORMATION</h2>
+  
+           <div class="information-section-items">
+             <div class="business-card">
+               <p class="section-title">企業情報</p>
+               <div class="organization">医療法人瑛幸会</div>
+               <div class="main-title">いろどり訪問看護ステーション山口中央本部</div>
+               <div class="address">山口県山口市中央4-1-1</div>
+               <div class="opening-hours">営業時間：月曜時から金曜日 9:00～17:30</div>
+               <div class="holiday">定休日：土日祝</div>
+               <div class="info-phone">
+                 <div class="info-phone-icon"></div>
+                 <div class="info-phone-number">0000-00-0000</div>
+                </div>
+             </div>
+     
+             <div class="business-card" id="sitemap">
+               <div class="section-title-sitemap">SITEMAP</div>
+               <div class="sitemap">
+                 <ul>
+                   <li><a href="#about">ABOUT   <span>私たちについて</span></a></li>
+                   <li><a href="#features">FEATURES   <span>私たちの特徴</span></a></li>
+                   <li><a href="#service">SERVICE   <span>私たちにお任せください</span></a></li>
+                   <li><a href="./form-sample.html">CONTACT   <span>ご利用方法</span></a></li>
+                   <li><a href="#recruit">RECRUIT   <span>求人情報</span></a></li>
+                   <li><a href="#requirements">REQUIREMENTS   <span>募集要項</span></a></li>
+                 </ul>
+               </div>
+              </div>
+              <div class="footer">
+                <!-- 拡大 -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6601.935230040143!2d131.4660273094788!3d34.17274565185071!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35449719f039c075%3A0xce38f9ca3d3225f0!2z44Gy44Gn5q2v56eR44Kv44Oq44OL44OD44KvIOefr-ato-atr-enkeODu-OBk-OBqeOCguatr-enkQ!5e0!3m2!1sja!2sjp!4v1739866657820!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="copyright">
+                  <p>@ Visiting nursing Station.</p>
+              </div>
+            </div>
+          </div>
+          
+         </div>
+       </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="./form/form.js"></script>
+
+</body>
+
+</html>

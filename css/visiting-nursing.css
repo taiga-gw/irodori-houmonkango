@@ -2,9 +2,331 @@
   display: none;
 }
 
-#contents_header {
+/* #contents_header {
+  display: none;
+} */
+
+/* Header Block */
+.site-contents_header {
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 20px 40px;
+  transition: all 0.3s ease;
+  position: fixed;
+  width: 100%;
+  height: 95px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(8px);
+}
+
+.site-contents_header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-logo {
+  max-width: 600px;
+}
+
+.site-logo a {
+  text-decoration: none;
+  color: #444444;
+  display: block;
+}
+
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 100;
+  border: none;
+  background: none;
+  margin-right: 5px;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 120%;
+  height: 2px;
+  background-color: #68B888;
+  transition: all 0.4s;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 11px;
+}
+
+.hamburger span:nth-child(3) {
+  bottom: 0;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(11px) rotate(-45deg);
+  background-color: #fff;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  background-color: #fff;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-11px) rotate(45deg);
+  background-color: #fff;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #68B888;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.4s;
+  padding-top: 80px;
+}
+
+.menu .title {
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: 8%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.menu-border {
+  width: 320px;
+  border: 1px solid #ffffff;
+  margin-bottom: 50px;
+}
+
+.menu.active {
+  transform: translateX(0);
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  gap: 35px;
+}
+
+.menu li {
+  margin: 0;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.4s;
+  text-align: left;
+}
+
+.menu.active li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menu.active {
+  margin-top: 0;
+}
+
+.menu ul a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Noto Serif JP;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 8%;
+  text-align: right;  
+  gap: 30px;
+}
+
+.menu a span {
+  display: block;
+  font-size: 18px;
+}
+
+.close-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.close-button::before,
+.close-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  top: 50%;
+  left: 0;
+}
+
+.close-button::before {
+  transform: rotate(45deg);
+}
+
+.close-button::after {
+  transform: rotate(-45deg);
+}
+
+.menu-contact {
+  position: absolute;
+  top: 500px;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.menu-phone {
+  font-family: 'Jost', sans-serif;
+  background: #fff;
+  color: #68B888;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 272px;
+  height: 72px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 24px;
+}
+
+.menu_contact-button-icon-phone {
+  width: 18px;
+  height: 26px;  
+  margin-right: 5px;
+}
+
+.menu-contact-button {
+  font-family: 'Jost', sans-serif;
+  background: #fff;
+  color: #68B888;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 272px;
+  height: 72px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 24px;
+}
+
+.menu_contact-button-icon-contact {
+  width: 33px;
+  height: 29px;
+  margin-right: 10px;
+}
+
+.contents_header__logo-desc {
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin: 10px 3px 5px 0;
+}
+
+.contents_header__site-logo {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
+
+.contents_header__site-logo br {
   display: none;
 }
+
+.header_contact-nav {
+  margin-left: auto;
+}
+
+.header_contact-nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 40px;
+}
+
+.header_contact-nav a {
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  color: #539F6E;
+  transition: color 0.3s ease;
+}
+
+.header_contact-button a:hover {
+  color: #68B888;
+}
+
+.header_contact-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 75px;
+  background-color: #68B888;
+  border-radius: 50px;
+  padding: 12px 40px;
+  transition: all 0.3s ease;
+}
+
+.header_contact-button:hover {
+  background-color: #539F6E;
+  transform: translateY(-2px);
+}
+
+.header_contact-button.header_contact-item  {
+  color: #ffffff;
+  letter-spacing: 0.16em;
+} 
 
 /* Hero Block */
 .hero {
@@ -35,16 +357,28 @@
   text-orientation: mixed;
   white-space: nowrap;
   font-size: 1.8rem;
-  line-height: 2;
+  line-height: 2.5;
   letter-spacing: 0.1em;
   border-right: 2px solid #ffffff;
   padding-right: 10px;
+  height: auto;
+}
+
+/* 「全身ケア」のテキストブロック */
+.hero__text-block:nth-child(1) {
+  height: 400px; /* 実際のコンテンツに合わせて調整 */
+}
+
+/* 「歯科医院が支える」のテキストブロック */
+.hero__text-block:nth-child(2) {
+  height: 450px; /* 実際のコンテンツに合わせて調整 */
 }
 
 .hero__number-block {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 450px;
 }
 
 .hero__number-text {
@@ -61,7 +395,7 @@
   font-family: 'Noto Serif JP', serif;
   font-weight: 400;
   font-size: 96px;
-  line-height: 105.6px;
+  line-height: 1;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
@@ -70,8 +404,15 @@
   font-family: 'Noto Serif JP', serif;
   font-weight: 400;
   font-size: 56px;
-  line-height: 62.72px;
+  line-height: 1.2;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero__small-text-in {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: 0%;
 }
 
 
@@ -217,8 +558,8 @@
   font-family: 'Noto Sans JP', serif;
   background-color: white;
   max-width: 100%;
-  margin: 0 100px 0 0 ;
-  text-align: center;
+  margin: 0 100px 0 100px ;
+  text-align: start;
   padding: 0 20px; 
   order: 2;
 }
@@ -320,19 +661,17 @@
   margin: 0;
 }
 
-.service-title {
-  text-align: center;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 64.8px;
-  letter-spacing: 8%;
-  margin-bottom: 40px;
-  color: #539F6E;
-}
-
 .service__content {
   margin: 0 auto;
-  padding: 60px 20px auto 20px;
+  padding: 4px 20px 0 20px;
+}
+
+.service__content-title.top {
+  color: #4CAF84;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin: 70px 0 50px;
 }
 
 .service__content-title {
@@ -340,7 +679,7 @@
   font-size: 32px;
   font-weight: 700;
   text-align: center;
-  margin: 70px 0 50px;
+  margin: 10px 0 50px;
 }
 
 .service__cards {
@@ -354,6 +693,10 @@
 .service__card-image-container {
   position: relative;
   aspect-ratio: 1;
+}
+
+.service__card-image-container br {
+  display: none;
 }
 
 .base-image {
@@ -386,6 +729,10 @@
   font-size: 24px;
   line-height: 1.3;
   width: 90%;
+}
+
+.long-text br {
+  display: inline;
 }
 
 .service__card-text.single-line {
@@ -575,6 +922,10 @@
   letter-spacing: 0%;
 }
 
+.recruit-section .top .recruit-desc br {
+  display: none;
+}
+
 .recruit-card-container {
   margin: 0 auto;
   max-width: 1320px;
@@ -622,6 +973,10 @@
   text-align: start;
 }
 
+.card-content .title br {
+  display: none;
+}
+
 .card-content .title span {
   color: #68B888;
   font-size: 48px;
@@ -643,7 +998,7 @@
 .price-tag {
   background: #F8F8F8;
   padding: 30px;
-  border-radius: 8px;
+  border-radius: 24px;
   width: 500px;
 }
 
@@ -794,8 +1149,8 @@
 }
 
 .benefit-icon {
-  width: 200px;
-  height: 200px;
+  width: 290px;
+  height: 290px;
   background: linear-gradient(135deg, #68B888 50%, #A0D0B0 50%);
   border-radius: 50%;
   display: flex;
@@ -947,7 +1302,7 @@
 .tabs {
   display: flex;
   align-items: end;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   gap: 10px;
 }
 
@@ -1001,7 +1356,12 @@
   display: none;
 }
 
+.requirements-info-details.active {
+  display: block;
+}
+
 .requirements-info-details {
+  display: none;
   max-width: 1280px;
   max-height: 1704px;
   margin: 0 auto;
@@ -1086,6 +1446,17 @@
   line-height: 84px;
   letter-spacing: 16px;
   background-color: #68B888;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.entry-button-item button a {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 84px;
+  letter-spacing: 16px;
   color: #ffffff;
   cursor: pointer;
 }
@@ -1285,34 +1656,159 @@
 
 .footer {
   position: absolute;
-  top: 100%;
+  top: 95%;
   width: 100%;
+  height: 324px;
   margin: 0;
   padding: 0;
 }
 
-.footer img {
+.footer iframe {
   width: 100%;
-  height: auto;
+  max-width: 1280px;
+  height: 100%;
+}
+
+/* .footer img {
+  width:  100%;
+  height: 100%;
   display: block;
   margin: 0;
   padding: 0;
-}
+} */
 
 .footer .copyright {
   color: #ffffff;
   text-align: center;
-  margin: 55px auto;
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
   display: none;
 }
 
-/* Media Query */
+.pagetop_btn_irodori {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.pagetop_btn_irodori.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pagetop_btn_irodori a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #539F6E;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+
+.pagetop_btn_irodori a::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: translateY(25%) rotate(-45deg);
+}
+
+.pagetop_btn_irodori a:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 1195px) {
+  .hamburger,
+  .menu {
+      display: none;
+  }
+}
+
+/* Media Query Mobile */
 @media screen and (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  /* ヘッダー */
+  .site-contents_header {
+    background-color: #ffffff;
+    position: fixed;
+    padding: 10px 20px; /* 上下のパディングを追加 */
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* スクロール時の視認性向上のための影を追加 */
+  }
+
+  .contents_header__logo-desc {
+    /* font-family: 'Hiragino Maru Gothic Std';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0%; */
+    display: none;
+  }
+
+  .contents_header__site-logo {
+    font-family: 'Hiragino Maru Gothic Std';
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    margin-bottom: 0;
+  }
+
+  .contents_header__site-logo br {
+    display: inline;
+  }
+
+  .header_contact-nav {
+    display: none; /* 通常のナビゲーションを非表示 */
+  }
+
+  .nav {
+    display: block; /* ハンバーガーメニューを表示 */
+  }
+
+  /* ハンバーガーボタンのスタイル */
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .header_contact-nav > ul {
+    display: none;
+  }
 
   /* トップ */
+  .hero {
+    margin-top: 70px; /* モバイル時のヘッダーの高さに合わせて調整 */
+  }
+
   .hero__container {
     width: 100%;
     height: auto;
@@ -1324,54 +1820,74 @@ footer {
   }
 
   .hero__overlay {
-    right: -1%;
-    transform: translateY(-50%) scale(0.7);
-  }
-
-  .hero__text-block {
-    border: none;
+    right: -23%;
+    transform: translateY(-30%) scale(1);
+    display: flex;
+    align-items: flex-start;
   }
   
   .hero__number-block {
     margin-top: -70px;
+    margin-right: 100px;
     display: flex;         
     flex-direction: column;
-    align-items: start;   
-    width: 100%;          
+    align-items: center;   
+    width: auto;          
   }
 
   .hero__number-text {
-    margin: 0;
+    margin: 10px 10px 10px auto;
     font-weight: 400;
     font-size: 28px;
     line-height: 28px;
-    letter-spacing: -3%;
-    text-align: start;
-    width: 100%;    
+    text-align: center;
+    text-shadow: 2px 2px 4px #278B46;
   }
 
   .hero__large-text {
-    margin-top: 100px;
+    margin-top: 0px;
     font-weight: 400;
     font-size: 44px;
-    line-height: 44px;
+    line-height: 1;
     letter-spacing: 0%;
-    border-right: 3px solid #ffffff;
+    padding-right: 0;
+    text-shadow: 2px 2px 2px #278B46;
   }
 
   .hero__small-text {
     font-weight: 400;
     font-size: 28px;
-    line-height: 28px;
+    line-height:28px;
     letter-spacing: 0%;
-    border-right: 3px solid #ffffff;
+    padding-right: 10px;
+    margin-top: -5px;
+    text-shadow: 2px 2px 4px #278B46;
   }
 
-  .small-text .first {
+  .hero__small-text-in {
+    font-family: 'Noto Serif JP';
     font-weight: 400;
-    font-size: 28px;
-    line-height: 28px;
-    letter-spacing: 0%;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -8%;
+  }
+
+    /* 「全身ケア」のテキストブロック */
+  .hero__text-block:nth-child(1) {
+    margin-top: 90px;
+    height: 180px; /* 実際のコンテンツに合わせて調整 */
+  }
+
+  /* 「歯科医院が支える」のテキストブロック */
+  .hero__text-block:nth-child(2) {
+    width: 40px;
+    height: 220px; /* 実際のコンテンツに合わせて調整 */
+    padding-right: 0;
+  }
+
+  .hero__text-block:last-child {
+    margin-right: 0;   /* 最後のブロックの右マージンを削除 */
+    height: 200px;
   }
 
   /* About Block */
@@ -1442,7 +1958,7 @@ footer {
 
   .reason__content {
     margin: 20px auto 10px auto;
-    padding: 15px;
+    padding: 15px 30px 30px 30px;
   }
 
   .pc-br br {
@@ -1567,7 +2083,7 @@ footer {
 
   .features__card-image-top {
     order: 1;
-    margin: -40px 0 0 0;
+    margin: -43px 0 0 0;
     width: 100%;
     content: url("../img/visiting-nursing-images/Mask group-10-sp.png");
   }
@@ -1658,6 +2174,10 @@ footer {
     width: 320px;
     height: 184px;
     border-radius: 32px;
+  }
+
+  .long-text.service__card-text br {
+    display: inline;
   }
 
   .service__card-image-container .icon-image {
@@ -1840,7 +2360,7 @@ footer {
     line-height: 34px;
     letter-spacing: 0%;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   .recruit-section .top .recruit-desc {
@@ -1892,12 +2412,20 @@ footer {
     text-align: center; /* 追加 */
   }
 
+  .card-content .title br {
+    display: inline;
+  }
+
   .card-content.bottom {
     width: 100%;
     padding: 0 0 20px 0;
     margin: 0 auto;     /* 追加 */
     text-align: center; /* 追加 */
     margin: 0 auto;
+  }
+
+  .card-content.bottom br {
+    display: inline;
   }
 
   .card-content .title span {
@@ -2227,7 +2755,7 @@ footer {
 
   .requirements-info-details {
     width: 100%;
-    max-width: 342px;
+    max-width: 100%;
     padding: 20px 15px; /* 横パディングを0に */
   }
 
@@ -2292,7 +2820,7 @@ footer {
   
   .entry-button-item {
     width: 100%; /* コンテナいっぱいに広げる */
-    max-width: 296px;
+    max-width: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2312,6 +2840,16 @@ footer {
     line-height: 54px;
     letter-spacing: 16px;
     background-color: #68B888;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .entry-button-item button a {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 84px;
+    letter-spacing: 16px;
     color: #ffffff;
     cursor: pointer;
   }
@@ -2388,7 +2926,1604 @@ footer {
 
   .information-section-items .main-title {
     font-weight: 400;
+    font-size: 21px;
+    line-height: 28px;
+    letter-spacing: 0%;  
+  }
+
+  .information-section-items .address {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0%;
+  }
+  .information-section-items .opening-hours {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    width: 300px;
+  }
+  .information-section-items .holiday {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0%;
+  }
+
+  .business-card {
+    text-align: center;
+  }
+
+  .business-card p {
+    padding-bottom: 15px;
+  }
+
+  #sitemap {
+    display: none;
+  }
+
+  .info-phone {
+    width: 288px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px auto;
+    gap: 10px;
+    padding: 0 10px;
+    background-color: #ffffff;
+    border-radius: 48px;
+  }
+
+  .info-phone-icon {
+    width: 19.21px;
+    height: 26.31px;
+    background-image: url("../img/visiting-nursing-images/phone-green.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .info-phone-number {
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 60px;
+    letter-spacing: 4%;
+    text-align: center;
+    color: #68B888;
+  }
+
+  .footer {
+    width: 100%;
+    max-width: 342px;
+    height: 192px;
+    margin-top: 20px;
+  }
+
+  /* .footer img {
+    width: 100%;
+    max-width: 342px;
+    height: 192px;
+    margin: 0;
+  } */
+
+  .footer iframe {
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+  }
+
+  .footer .copyright {
+    margin: 20px auto;
+    position: absolute;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* トップに戻るボタン */
+  .pagetop_btn_irodori {
+    bottom: 100px;
+    right: 15px;
+  }
+  
+  .pagetop_btn_irodori a {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .pagetop_btn_irodori a::before {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1194px) {
+  .site-contents_header {
+    background-color: #ffffff;
+    position: fixed;
+    padding: 15px 30px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .contents_header__logo-desc {
+    /* font-family: 'Hiragino Maru Gothic Std';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0%; */
+    display: none;
+  }
+
+  .contents_header__site-logo {
+    font-family: 'Hiragino Maru Gothic Std';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    margin-bottom: 0;
+    padding: 10px;
+  }
+
+  /* PCナビゲーションを非表示 */
+  .header_contact-nav {
+    display: none;
+  }
+
+  /* ハンバーガーメニューを表示 */
+  .nav {
+    display: block;
+  }
+
+  /* ハンバーガーボタン */
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  /* メニュー展開時のスタイル */
+  .menu {
+    width: 50%; /* タブレットではメニューを半分の幅に */
+    right: 0;
+    left: auto;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu .title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .menu-border {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
+  .menu ul {
+    gap: 30px;
+  }
+
+  .menu a {
+    font-size: 20px;
+  }
+
+  .menu a span {
+    font-size: 18px;
+  }
+
+  /* メニュー内の電話とお問い合わせボタン */
+  .menu-contact {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .menu-phone,
+  .menu-contact-button {
+    max-width: 300px;
+    height: 80px;
+    font-size: 24px;
+  }
+
+  /* Hero Block */
+  .hero {
+    margin-top: 82px;
+  }
+
+  .hero__container {
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero__image-pc {
+    width: 100%;
+    content: url('../img/visiting-nursing-images/Mask group-15.png');
+  }
+
+  .hero__overlay {
+    right: -3%;
+    transform: translateY(-70%) scale(0.7);
+  }
+
+  .hero__text-block {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    white-space: nowrap;
+    font-size: 1.8rem;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    border-right: 2px solid #ffffff;
+    padding: 15px;
+  }
+
+  .hero__number-block {
+    margin-top: -10px;
+  }
+
+  .hero__number-text {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 64px;
+    letter-spacing: -3px;
+    margin-bottom: 0;
+  }
+
+  .hero__large-text {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-size: 85px;
+    line-height: 90px;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin-top: -10px;
+  }
+  
+  .hero__small-text {
+    margin-top: 0;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .hero__small-text-in {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 44px;
+    letter-spacing: 3%;
+  }
+
+  /* 「全身ケア」のテキストブロック */
+  .hero__text-block:nth-child(1) {
+    padding-right: 5px;
+    height: 380px; /* 実際のコンテンツに合わせて調整 */
+  }
+
+  /* 「歯科医院が支える」のテキストブロック */
+  .hero__text-block:nth-child(2) {
+    height: 400px; /* 実際のコンテンツに合わせて調整 */
+  }
+
+  .hero__text-block:last-child {
+    margin-top: -10px;
+    height: 320px;
+  }
+
+  /* About Block */
+  .about {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    margin: 50px auto;
+  }
+
+  .about__title {
+    font-family: 'Noto Serif JP';
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 33.75px;
+    letter-spacing: 8%;
+    text-align: center;
+    
+  }
+
+  .about__subtitle {
+    font-family: 'Noto Serif JP';
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 48.6px;
+    letter-spacing: 8%;
+    text-align: center;
+    
+  }
+
+  .about__label {
+    background-color: #68B888;
+    color: #ffffff;
+    font-family: 'Jost', sans-serif;
     font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 8%;
+    padding: 6px 24px;
+    display: inline-block;
+    margin: 50px auto 70px auto; 
+  }
+
+  .about__image-left {
+    width: 320px;
+    height: 192px;
+  }
+
+  .about__image-right {
+    width: 320px;
+    height: 192px;
+  }
+
+  /* Reason Block */
+  .reason {
+    margin-top: 50px;
+  }
+  
+  .reason__title {
+    font-family:' Noto Sans JP';
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29.7px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #539F6E;
+  }
+
+  .reason__content {
+    max-width: 800px;
+    margin: 40px auto 70px auto;
+    background-color: #F8F8E8;
+  }
+  
+  .reason__text {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .reason__text:nth-child(1) {
+    margin-bottom: 0;
+  }
+  
+  .reason__text:nth-child(3) {
+    margin-bottom: 0;
+  }
+
+  /* FEATURES Block */
+  .features {
+    margin-top: -85px;
+  }
+
+  .features__header {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+  }
+
+  .features__image {
+    width: 100%;
+    height: auto;
+    content: url("../img/visiting-nursing-images/Rectangle 75-tab.png");
+  }
+
+  .features__title,
+  .features__subtitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+  }
+
+  .features__title {
+    font-family: 'Jost', sans-serif;
+    top: 25%;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 118.8px;
+    letter-spacing: 8%;
+    margin: 0;
+  }
+  
+  .features__subtitle {
+    top: 55%;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 43.2px;
+    letter-spacing: 8%;
+    margin: 0;
+  }
+
+  .features__content {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .features__card {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .features__card:nth-child(2) {
+    margin-top: 20px;
+  }
+  
+  /* 2番目のカードの画像を左側に配置 */
+  .features__card:nth-child(2) .features__card-text {
+    font-family: 'Noto Sans JP', serif;
+    background-color: white;
+    max-width: 100%;
+    margin: 0 100px 0 0 ;
+    text-align: center;
+    padding: 0 20px; 
+    order: 2;
+  }
+  
+  .features__card:nth-child(2) .features__card-image {
+    order: 1;
+  }
+  
+  .features__card-text {
+    margin: 0;
+    padding-left: 75px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .features__card:nth-child(2) .features__card-text {
+    margin-top: 60px;
+    padding-left: 65px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .features__card:nth-child(3) .features__card-text {
+    padding-left: 70px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+  
+  .features__card-text h3 {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .features__card-text p {
+    max-width: 256px;
+    height: 150px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .features__card-text p br {
+    display: none; /* 改行を削除 */
+  }
+
+  /* 画像エリアの修正 */
+  .features__card-image {
+    width: 100%;
+    order: 1;
+  }
+
+  .features__card:nth-child(2) .features__card-image {
+    order: 1;
+  }
+
+  .features__card-image-top {
+    content: url("../img/visiting-nursing-images/Mask group-17.png");
+  }
+
+  .features__card-image-middle {
+    content: url("../img/visiting-nursing-images/Mask group-18.png");
+  }
+
+  .features__card-image-bottom {
+    content: url("../img/visiting-nursing-images/Mask group-19.png");
+  }
+
+  /* SERVICE Block */
+  .service__header {
+    position: relative;
+    margin-top: 25px;
+    padding: 0;
+    line-height: 0;
+  }
+  .service__image {
+    width: 100%;
+    height: auto;
+    content: url("../img/visiting-nursing-images/Rectangle\ 98-tab.png");
+  }
+
+  .service__title,
+  .service__subtitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+  }
+
+  .service__title {
+    font-family: 'Jost', sans-serif;
+    top: 35%;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 64.8px;
+    letter-spacing: 8%;
+    margin: 0 auto;
+  }
+
+  .service__subtitle {
+    top: 60%;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 8%;
+    margin: 0;
+  }
+
+  .service__content {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+
+  .service__content-title {
+    color: #4CAF84;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin: 40px 0 30px;
+  }
+
+  .service__content-title.top {
+    margin-top: 0;
+  }
+
+  .service__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .base-image {
+    content: url("../img/visiting-nursing-images/Rectangle\ 15.png");
+  }
+
+  .icon-image {
+    position: absolute;
+    width: 88.4px;
+    height: 74px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+  }
+
+  .service__card-image-container br {
+    display: inline;
+  }
+
+  .service__card-text {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.3px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .service__card-text.long-text {
+    font-size: 18px;
+    padding: 0;
+    line-height: 1.3;
+    width: 100%;
+  }
+  
+  .service__card-text.single-line {
+    font-size: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  /* CONTACT Block */ 
+
+  .contact-section-img h2 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    line-height: 1.2;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .contact-section-img .top {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    line-height: 1.5;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .contact-section-img .contact-img {
+    width: 100%;
+    height: 632px;
+    content: url("../img/visiting-nursing-images/Rectangle 79-tab.png");
+  }
+
+  .contact-section-img .bottom1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    line-height: 30px;
+    width: 342px;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .contact-section-img .bottom2 {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    line-height: 30px;
+    width: 640px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .contact-buttons-container {
+    display: flex;
+    gap: 45px;
+    top: 55%;
+    width: 100%;
+    padding: 0 20px;
+    left: 50%;
+  }
+
+  .contact-button-item {
+    width: 100%;
+    height: 136px;
+  }
+
+  .contact-button-icon-phone {
+    width: 23px;
+    height: 31.5px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-button-icon-contact {
+    padding: 0;
+  }
+
+  .contact-button-text.phone {
+    display: none;
+  }
+
+  .contact-button-item.phone {
+    width: 304px;
+    padding: 0;
+  }
+
+  .contact-button-item.pc-smartphone {
+    width: 304px;
+    padding: 0;
+  } 
+
+  .contact-button-text.phone-num {
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 64px;
+    letter-spacing: 4%;
+    text-align: center;
+  }
+
+  .contact-button-text.contact {
+    font-family: 'Noto Sans JP';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+
+  /* RECRUIT */
+  .recruit-section {
+    min-height: 1450px;
+  }
+
+  .recruit-section .top {
+    margin-top: -20px;
+    padding: 0 30px;
+  }
+
+  .recruit-section .top h2 {
+    font-family: 'Jost';
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 64.8px;
+    letter-spacing: 8%;
+    text-align: center;
+  }
+
+  .recruit-section .top p {
+    font-family: 'Noto Serif JP';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 8%;
+    text-align: center;
+  }
+
+  .recruit-desc {
+    font-family: 'Noto Sans JP';
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+
+  .recruit-section .top .recruit-desc {
+    margin: 50px auto;
+  }
+  .recruit-section .top .recruit-desc br {
+    display: inline;
+  }
+  
+  .recruit-card-container {
+    margin: 0 auto;
+    width: 720px;
+  }
+  
+  .recruit-card {
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin: 50px auto 0 auto;
+    padding: 0;
+    border-radius: 0;
+  }
+  
+  .card-content.bottom.title.br {
+    display: none;
+  }
+  
+  .recruit-image-container-1 {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .recruit-image-container-2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .recruit-image-container-1 img {
+    max-width: 376px;
+    content: url("../img/visiting-nursing-images/Mask group-20.png");
+  }
+
+  .recruit-image-container-2 img {
+    max-width: 376px;
+    content: url("../img/visiting-nursing-images/Mask group-21.png");
+  }
+
+  .card-content {
+    max-width: 480px;
+  }
+
+  .card-content p.description {
+    max-width: 256px;
+  }
+
+  .card-content p.description br {
+    display: none;
+  }
+
+  .card-content .title {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .card-content .title span {
+    font-size: 32px;
+  }
+
+  .card-content .title br {
+    display: inline;
+  }
+
+  .card-content .description {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+  }
+
+  .card-content.bottom {
+    max-width: 375px;
+    max-height: 456px;
+    padding: 30px 0 30px 50px;
+    margin-bottom: 5px;
+  }
+
+  .card-content.bottom br {
+    display: inline;
+  }
+
+  .card-content.bottom p.description br {
+    display: none;
+  }
+
+  .price-tag {
+    background: #F3F3F3;
+    border-radius: 12px;
+    padding: 0;
+    max-width: 270px;
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 15px 0 0 15px;
+  }
+
+  .price span {
+    display: inline-block;
+    background-color: #68B888;
+    color: #FFFFFF;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-right: 15px;
+  }
+
+  .amount {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .yen {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+  .conditions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 15px 15px 15px;
+  }
+
+  .bonus {
+    max-width: 144px;
+    display: inline-block;
+    border: 1px solid #68B888;
+    color: #68B888;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: start;
+  }
+
+  .options:nth-child(1) {
+    max-width: 144px;
+    display: inline-block;
+    border: 1px solid #68B888;
+    color: #68B888;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .options {
+    max-width: 192px;
+    display: inline-block;
+    border: 1px solid #68B888;
+    color: #68B888;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: start;
+  }
+
+  /* 福利厚生 */
+  .welfare-section {
+    position: relative;
+    background-color: #fff;
+    padding-top: 0;
+    margin: 50px auto;
+  }
+  
+  .welfare-section::before {
+    content: '';
+    position: absolute;
+    top: -210px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #F8F8E8;
+    transform: skewY(4deg);
+    transform-origin: left;
+  }
+
+  .welfare-title {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+    color: #444444;
+    text-align: center;
+    margin: 120px auto 0 auto;
+  }
+
+  .benefit-title {
+    font-size: 22px;
+    padding: 4px 16px;
+  }
+
+  /* アイコングリッド */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2列に変更 */
+    gap: 10px;
+    padding: 0 24px;
+  }
+
+  .benefit-icon {
+    width: 203px;
+    height: 203px;
+    background: linear-gradient(135deg, #68B888 50%, #A0D0B0 50%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .benefit-icon-1,
+  .benefit-icon-2 {
+    width: 62px;
+    height: 77px;
+  }
+
+  .benefit-icon-3,
+  .benefit-icon-4,
+  .benefit-icon-5,
+  .benefit-icon-6 {
+    width: 89px;
+    height: 81px;
+  }
+
+  .present .present-img {
+    width: 100%;
+    height: auto;
+    margin: 70px auto;
+    content: url("../img/visiting-nursing-images/present-tab.png");
+  }
+
+    /* REQUIREMENTS */
+    .requirements-section-img {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+      width: 100%;
+    }
+    
+    .requirements-section-img img {
+      width: 100%;
+      height: 256px;
+      content: url("../img/visiting-nursing-images/Rectangle 99-tab.png");
+    }
+
+    .requirements-section-img h2,
+    .requirements-section-img p {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      text-align: center;
+      width: 500px;
+      margin: 0;
+    }
+    
+    .requirements-section-img h2 {
+      top: 32%;
+      font-family: 'Jost';
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 64.8px;
+      letter-spacing: 3%;
+    }
+    
+    .requirements-section-img p {
+      top: 55%;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.35;
+      letter-spacing: 0.08em;
+    }
+
+    .requirements-contents {
+      margin: 80px auto 50px auto;
+      max-width: 1280px;
+      max-height: 1704px;
+      padding: 50px;
+    }
+    
+    .tabs {
+      display: flex;
+      align-items: end;
+      margin-bottom: 8px;
+      gap: 10px;
+    }
+    
+    .tab {
+      width: 314px;
+      height: 112px;
+      background-color: #CCCCCC;
+      /* ポリゴンを使って斜めの角を作成 */
+      clip-path: polygon(
+          40px 0,    /* 左上の開始点 */
+          100% 0,    /* 右上 */
+          100% 100%, /* 右下 */
+          0 100%,    /* 左下 */
+          0 40px     /* 左上の終点 */
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 43.2px;
+      letter-spacing: 8%;
+      color: #666666;
+    }
+    
+    .tab.active {
+      width: 314px;
+      height: 136px;
+      background-color: #68B888;
+      /* ポリゴンを使って斜めの角を作成 */
+      clip-path: polygon(
+          40px 0,    /* 左上の開始点 */
+          100% 0,    /* 右上 */
+          100% 100%, /* 右下 */
+          0 100%,    /* 左下 */
+          0 40px     /* 左上の終点 */
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 43.2px;
+      letter-spacing: 8%;
+      color: #ffffff;
+    }
+    
+    .tab.mobile {
+      display: none;
+    }
+    
+    .requirements-info-details {
+      max-width: 1280px;
+      max-height: 1704px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 40px;
+    }
+    
+    .requirements-info-details-title {
+      text-align: center;
+    }
+    
+    .requirements-info-details-title-p br {
+      display: none;
+    }
+    
+    .requirements-info-details-title h1 {
+      color: #539F6E;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 43.2px;
+      letter-spacing: 8%;
+      padding: 50px 0 30px 0;
+    }
+    
+    .requirements-info-details-title p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 36px;
+      color: #666;
+    }
+    
+    .info-table {
+      width: 100%;
+      max-width: 1024px;
+      margin: 50px auto;
+      border-collapse: collapse;
+    }
+    
+    .info-table th {
+      background-color: #F3F3F3;
+      border-top: #CCCCCC 1px solid;
+      border-bottom: #CCCCCC 1px solid;
+      width: 150px;
+      padding: 15px;
+      text-align: left;
+      color: #4CAF50;
+      font-weight: normal;
+      vertical-align: top;
+    }
+    
+    .info-table td {
+      padding: 15px;
+      line-height: 1.6;
+      background-color: #ffffff;
+      border-top: #CCCCCC 1px solid;
+      border-bottom: #CCCCCC 1px solid;
+    }
+    
+    .entry-button-container {
+      margin: 50px auto; /* Add margin below the entry button */
+      position: relative; /* Add position relative */
+      z-index: 1;
+    }
+    
+    .entry-button-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #68B888;
+      border-radius: 24px;
+      width: 584px;
+      height: 128px;
+      cursor: pointer;
+      position: relative;
+      margin: 0 auto;
+    }
+    
+    .entry-button-item button {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 84px;
+      letter-spacing: 16px;
+      background-color: #68B888;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    .entry-button-item::after {
+      content: '';
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: -27px;
+      height: 27px;
+      background-color: #CCCCCC;
+      border-radius: 0 0 24px 24px;  /* 下部の角のみを丸く */
+      z-index: -1;
+    }
+
+    /* INFORMATION */
+    .information-section {
+      margin-top: 100px;
+      position: relative;
+    }
+    
+    .information-section-img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .information-section-img .info-img {
+      width: 100%;
+      height: 1200px;
+      margin: auto;
+      content: url("../img/visiting-nursing-images/Rectangle 123-tab.png");
+      display: block;
+    }
+
+    .information-section-img h2 {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #FFFFFF;
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 43px;
+      line-height: 64.8px;
+      letter-spacing: 8%;
+      margin: 0;
+      width: 500px;
+      text-align: center;
+    }
+
+    .information-section-items {
+      position: absolute;
+      top: 25%;
+    }
+  
+    .information-section-items .section-title {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+      letter-spacing: 8%;
+      text-align: center;
+    }
+  
+    .information-section-items .organization {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 15px;
+      letter-spacing: 0%;    
+    }
+  
+    .information-section-items .main-title {
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 28px;
+      letter-spacing: 0%;  
+    }
+  
+    .information-section-items .address {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 15px;
+      letter-spacing: 0%;
+    }
+    .information-section-items .opening-hours {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 15px;
+      letter-spacing: 0%;
+    }
+    .information-section-items .holiday {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 15px;
+      letter-spacing: 0%;
+    }
+  
+    .business-card {
+      text-align: center;
+    }
+  
+    .business-card p {
+      padding-bottom: 15px;
+    }
+
+    #sitemap {
+      display: none;
+    }
+
+    .info-phone {
+      width: 288px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 30px auto;
+      gap: 10px;
+      padding: 0 10px;
+      background-color: #ffffff;
+      border-radius: 48px;
+    }
+  
+    .info-phone-icon {
+      width: 19.21px;
+      height: 26.31px;
+      background-image: url("../img/visiting-nursing-images/phone-green.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  
+    .info-phone-number {
+      font-family: 'Jost';
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 60px;
+      letter-spacing: 4%;
+      text-align: center;
+      color: #68B888;
+    }
+  
+    .footer {
+      width: 100%;
+      height: 100%;
+      margin: 40px auto;
+    }
+
+    .footer iframe {
+      max-width: 100%;
+      height: 100%;
+    }
+  
+    .footer .copyright {
+      margin: 70px auto;
+      position: absolute;
+      color: #ffffff;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  /* Hero Block */
+  .hero__overlay {
+    right: 5px;
+    transform: translateY(-70%) scale(0.7);
+  }
+
+  /* Feature Block */
+  .features__title {
+    font-family: 'Jost', sans-serif;
+    top: 30%;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 118.8px;
+    letter-spacing: 8%;
+    margin: 0;
+  }
+  /* Reason Block */
+  .reason {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  /* SERVICE Block */
+  .service__header {
+    position: relative;
+    margin-top: 10px;
+    padding: 0;
+    line-height: 0;
+  }
+  .service__image {
+    width: 100%;
+    height: auto;
+    content: url("../img/visiting-nursing-images/Rectangle\ 98-tab.png");
+  }
+
+  .service__title,
+  .service__subtitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+  }
+
+  .service__title {
+    font-family: 'Jost', sans-serif;
+    top: 35%;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 64.8px;
+    letter-spacing: 8%;
+    margin: 0 auto;
+  }
+
+  .service__subtitle {
+    top: 55%;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 8%;
+    margin: 0;
+}
+
+  .service__content {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+
+  .service__content-title {
+    color: #4CAF84;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin: 40px 0 30px;
+  }
+
+  .service__content-title.top {
+    margin-top: 0;
+  }
+
+  .service__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .base-image {
+    width: 300px;
+    content: url("../img/visiting-nursing-images/Rectangle\ 15.png");
+  }
+
+  .icon-image {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+  }
+
+  .service__card-image-container {
+    margin-left: 35px;
+  }
+
+  .service__card-image-container br {
+    display: inline;
+  }
+
+  .service__card-text {
+    position: absolute;
+    top:75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.3px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .service__card-text.long-text {
+    font-size: 20px;
+    padding: 0;
+    line-height: 1.3;
+    width: 100%;
+  }
+  
+  .service__card-text.single-line {
+    font-size: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  /* Contact */
+  .contact-buttons-container {
+    display: flex;
+    gap: 45px;
+    top: 52%;
+    width: 100%;
+    padding: 0 20px;
+    left: 50%;
+  }
+
+  /* Information Block */
+  .information-section-img .info-img {
+    width: 100%;
+    height: 1500px;
+    margin: auto;
+    content: url("../img/visiting-nursing-images/Rectangle 123-tab.png");
+    display: block;
+  }
+
+  .information-section-img h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFFFFF;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 43px;
+    line-height: 64.8px;
+    letter-spacing: 8%;
+    margin: 0;
+    width: 500px;
+    text-align: center;
+  }
+
+  .information-section-items {
+    position: absolute;
+    top: 25%;
+  }
+
+  .information-section-items .section-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 8%;
+    text-align: center;
+  }
+
+  .information-section-items .organization {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0%;    
+  }
+
+  .information-section-items .main-title {
+    font-weight: 400;
+    font-size: 21px;
     line-height: 28px;
     letter-spacing: 0%;  
   }
@@ -2431,19 +4566,11 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 40px auto;
+    margin: 30px auto;
     gap: 10px;
     padding: 0 10px;
     background-color: #ffffff;
     border-radius: 48px;
-  }
-
-  .info-phone-icon {
-    width: 19.21px;
-    height: 26.31px;
-    background-image: url("../img/visiting-nursing-images/phone-green.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
   }
 
   .info-phone-number {
@@ -2458,24 +4585,23 @@ footer {
 
   .footer {
     width: 100%;
-    max-width: 342px;
-    height: auto;
-    margin: 0;
+    height: 100%;
+    margin: 40px auto;
   }
 
-  .footer img {
-    width: 100%;
-    max-width: 342px;
-    height: 192px;
-    margin: 0;
+  .footer iframe {
+    max-width: 100%;
+    height: 100%;
   }
 
   .footer .copyright {
-    margin: 10px auto;
+    margin: 70px auto;
     position: absolute;
     color: #ffffff;
     text-align: center;
-    top: 200px;
-    left: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 }
