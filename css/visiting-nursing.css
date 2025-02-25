@@ -7,9 +7,9 @@
 } */
 
 /* Header Block */
-.site-contents_header {
+.site-contents__header {
   background-color: rgba(255, 255, 255, 0.65);
-  padding: 20px 40px;
+  padding: 20px;
   transition: all 0.3s ease;
   position: fixed;
   width: 100%;
@@ -23,7 +23,7 @@
   backdrop-filter: blur(8px);
 }
 
-.site-contents_header.scrolled {
+.site-contents__header.scrolled {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -260,7 +260,7 @@
   margin-right: 10px;
 }
 
-.contents_header__logo-desc {
+.site-contents_header__logo-desc {
   font-size: 15px;
   line-height: 1;
   font-weight: 400;
@@ -268,7 +268,7 @@
   margin: 10px 3px 5px 0;
 }
 
-.contents_header__site-logo {
+.site-contents_header__site-logo {
   font-size: 30px;
   line-height: 1;
   font-weight: 400;
@@ -276,22 +276,22 @@
   margin-bottom: 10px;
 }
 
-.contents_header__site-logo br {
+.site-contents_header__site-logo br {
   display: none;
 }
 
-.header_contact-nav {
+.site-contents__nav {
   margin-left: auto;
 }
 
-.header_contact-nav ul {
+.site-contents__nav ul {
   display: flex;
   list-style: none;
   align-items: center;
   gap: 40px;
 }
 
-.header_contact-nav a {
+.site-contents__nav a {
   text-decoration: none;
   font-family: 'Jost', sans-serif;
   font-weight: 500;
@@ -302,11 +302,11 @@
   transition: color 0.3s ease;
 }
 
-.header_contact-button a:hover {
+.site-contents__button a:hover {
   color: #68B888;
 }
 
-.header_contact-button {
+.site-contents__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,12 +318,12 @@
   transition: all 0.3s ease;
 }
 
-.header_contact-button:hover {
+.site-contents__button:hover {
   background-color: #539F6E;
   transform: translateY(-2px);
 }
 
-.header_contact-button.header_contact-item  {
+.site-contents__button.site-contents__item  {
   color: #ffffff;
   letter-spacing: 0.16em;
 } 
@@ -1747,7 +1747,7 @@ footer {
   }
 
   /* ヘッダー */
-  .site-contents_header {
+  .site-contents___header {
     background-color: #ffffff;
     position: fixed;
     padding: 10px 20px; /* 上下のパディングを追加 */
@@ -1762,7 +1762,7 @@ footer {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* スクロール時の視認性向上のための影を追加 */
   }
 
-  .contents_header__logo-desc {
+  .site-contents_header__logo-desc {
     /* font-family: 'Hiragino Maru Gothic Std';
     font-weight: 400;
     font-size: 15px;
@@ -1771,7 +1771,7 @@ footer {
     display: none;
   }
 
-  .contents_header__site-logo {
+  .site-contents_header__site-logo {
     font-family: 'Hiragino Maru Gothic Std';
     font-weight: 400;
     font-size: 23px;
@@ -1780,11 +1780,11 @@ footer {
     margin-bottom: 0;
   }
 
-  .contents_header__site-logo br {
+  .site-contents_header__site-logo br {
     display: inline;
   }
 
-  .header_contact-nav {
+  .site-contents__nav {
     display: none; /* 通常のナビゲーションを非表示 */
   }
 
@@ -1806,7 +1806,7 @@ footer {
 
   /* トップ */
   .hero {
-    margin-top: 70px; /* モバイル時のヘッダーの高さに合わせて調整 */
+    margin-top: 93px; /* モバイル時のヘッダーの高さに合わせて調整 */
   }
 
   .hero__container {
@@ -2790,7 +2790,7 @@ footer {
   
   /* テーブル全体の幅を調整 */
   .info-table {
-    width: 296px;
+    width: 305px;
     margin: 30px auto;
     padding: 0;
   }
@@ -3044,7 +3044,7 @@ footer {
 }
 
 @media screen and (min-width: 820px) and (max-width: 1194px) {
-  .site-contents_header {
+  .site-contents__header {
     background-color: #ffffff;
     position: fixed;
     padding: 15px 30px;
@@ -3059,7 +3059,7 @@ footer {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
-  .contents_header__logo-desc {
+  .site-contents_header__logo-desc {
     /* font-family: 'Hiragino Maru Gothic Std';
     font-weight: 400;
     font-size: 18px;
@@ -3068,7 +3068,7 @@ footer {
     display: none;
   }
 
-  .contents_header__site-logo {
+  .site-contents_header__site-logo {
     font-family: 'Hiragino Maru Gothic Std';
     font-weight: 400;
     font-size: 28px;
@@ -3079,7 +3079,7 @@ footer {
   }
 
   /* PCナビゲーションを非表示 */
-  .header_contact-nav {
+  .site-contents__nav {
     display: none;
   }
 
